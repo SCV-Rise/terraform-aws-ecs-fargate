@@ -5,9 +5,16 @@ terraform {
   required_version = ">= 0.14"
 }
 
+# provider "aws" {
+#   region = var.region
+# }
 provider "aws" {
-  region = var.region
-}
+  region     = "ap-southeast-1"
+  access_key = ""
+  secret_key = ""
+  token = ""
+  }
+
 
 data "aws_vpc" "main" {
   default = true
